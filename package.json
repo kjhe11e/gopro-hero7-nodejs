@@ -10,7 +10,11 @@
   "author": "kyle helle",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-    "goproh4": "^0.4.2"
+    "express": "^4.17.1",
+    "goproh4": "^0.4.2",
+    "helmet": "^4.2.0",
+    "morgan": "^1.10.0"
   }
 }

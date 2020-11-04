@@ -1,0 +1,12 @@
+version: "3"
+services:
+  gopro-server:
+    build: .
+    environment:
+      MAC: "${MAC}"
+      PORT: 3001
+    ports:
+      - "3001:3001"
+    command: npm run go
+    volumes:
+      - .:/app/

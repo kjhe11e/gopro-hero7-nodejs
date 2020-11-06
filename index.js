@@ -35,6 +35,16 @@ app.get('/capturePicture', (req, res) => {
   res.send('Capturing picture');
 });
 
+app.get('/listMedia', async (req, res) => {
+  console.log('received list media request');
+  cam.listMedia()
+    .then((result) => {
+      res.send({ media: result });
+    }).catch((err) => {
+      res.send(`List media error: ${err}`);
+    });
+});
+
 app.get('/captureVideo', (req, res) => {
   // Set camera mode
   cam.mode(GoPro.Settings.Modes.Video, GoPro.Settings.Submodes.Video.Video)
